@@ -4,16 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>한재희 웹 포트폴리오</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
+
 <body>
+    
+    <section id="main">
+        <h1 class="blind">hello!</h1>
+        <p>Three.js</p>
+        <div id="app"></div>
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 
-    <h1>안녕하세요</h1>
-    <a href="https://han97hee.github.io/hanyang/" target="_blank">한양사이버대학원 홈피 제작 한재희</a><br><br><br>
-        <a href="https://han97hee.github.io/world/" target="_blank">세계동물어쩌구 제작 한재희</a><br><br><br>
-            <a href="https://han97hee.github.io/hifuhan/" target="_blank">하이퍼니처 가구홈피 제작 한재희</a><br><br><br><br><br>
+            <!-- home link  -->
+            <a href="index.html">
+                <canvas id="home" width="80" height="80"></canvas>
+            </a>
 
-            <h4>포트폴리오 페이지 준비중...</h4>
-            <br><br>
-            <h5>위의 3가지 홈페이지 제작 보러가기 링크</h5>
+            <!-- 우주 메인 배경 3d  -->
+            <canvas id="space" width="1920" height="1080"></canvas>
+
+            <!-- 자기소개 우주선 -->
+           <a href="자기소개.html" target="_blank">
+            <canvas id="sship" width="500" height="400"></canvas>
+           </a>
+
+           <!-- 최하단 three.js 마크 -->
+            <canvas id="three3" width="200" height="200"></canvas>
+
+
+
+
+
+
+            <script type="importmap">
+                {
+                    "imports": {
+                      "three": "https://unpkg.com/three@0.141.0/build/three.module.js",
+                      "GLTFLoader" : "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js"
+                    }
+                  }
+            </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.156.1/three.min.js"></script>
+            <!-- 메인 비주얼 우주 3d 배경 -->
+            <script type="module">
+                import {GLTFLoader} from 'GLTFLoader';
+                import * as THREE from 'three';
+    
+                let scene = new THREE.Scene();
+                let renderer = new THREE.WebGLRenderer({
+                    canvas : document.querySelector('#space'),
+                    antialias : true
+                });
+                renderer.OutputEncoding = THREE.sRGBEncoding;
+    
+                let camera = new THREE.PerspectiveCamera(35,1);
+                camera.position.set(0,0,4)
+                //순서대로 좌우값,상하값,인아웃값
+                scene.background = new THREE.Color('black');
+                let light = new THREE.DirectionalLight(0xfffff0,3);
+                scene.add(light);
+                
+                let loader = new GLTFLoader();
+                loader.load('space/scene.gltf', function(gltf){
+                    scene.add(gltf.scene);
+                    function animate(){
+                        requestAnimationFrame(animate)
+                        gltf.scene.rotation.y += 0.0002;
+                        gltf.scene.rotation.x += 0.0004;
+                        renderer.render(scene, camera);
+                    }
+                    animate()
+                });
+    
+                renderer.render(scene, camera);
+            </script>
+            <script type="module" src="sship.js"></script>
+            <script type="module" src="3dthree.js"></script>
+            <script type="module" src="home.js"></script>
+            <script src="main.js"></script>
+    </section>
+
+
+
+
+
+
 </body>
 </html>

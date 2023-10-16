@@ -1,0 +1,11 @@
+Model Information:
+* title:	NASA Dawn Spacecraft
+* source:	https://sketchfab.com/3d-models/nasa-dawn-spacecraft-93c830d8eac94baaa927b2e07a00063e
+* author:	Roxanne (https://sketchfab.com/RoxanneShewchuk)
+
+Model License:
+* license type:	CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions must have the same license.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "NASA Dawn Spacecraft" (https://sketchfab.com/3d-models/nasa-dawn-spacecraft-93c830d8eac94baaa927b2e07a00063e) by Roxanne (https://sketchfab.com/RoxanneShewchuk) licensed under CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
