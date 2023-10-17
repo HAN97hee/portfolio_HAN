@@ -1,5 +1,6 @@
     import {GLTFLoader} from 'GLTFLoader';
     import * as THREE from 'three';
+    import { OrbitControls } from '/three.js-master/examples/jsm/controls/OrbitControls.js';
 
     let scene = new THREE.Scene();
     let renderer = new THREE.WebGLRenderer({
@@ -16,6 +17,10 @@
         let light = new THREE.DirectionalLight(0xfffff0,10);
         scene.add(light);
                 
+        let controls = new OrbitControls( camera, renderer.domElement);
+            controls.minDistance = 200;
+            controls.maxDistance = 1000;
+
         let loader = new GLTFLoader();
         loader.load('spacecraft/scene.gltf', function(gltf){
         scene.add(gltf.scene);
@@ -24,6 +29,7 @@
                 gltf.scene.rotation.y += 0.001;
                 gltf.scene.rotation.x += 0.002;
                 renderer.render(scene, camera);
+                controls.update();
             }
             animate()
         });

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>한재희 웹 포트폴리오</title>
+    <link rel="shortcut icon" type="image/x-icon" href="이미지/파비콘.png" >
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <link rel="stylesheet" href="style.css">
@@ -14,7 +15,9 @@
     
     <section id="main">
         <h1 class="blind">hello!</h1>
-        <p>Three.js</p>
+        <p>Three.js Web Construction <br>jea hee HAN</p>
+        <a href="https://github.com/HAN97hee" target="_blank" class="gitgit"><img src="/이미지/github-logo.svg" alt="깃허브 한재희 페이지이동 이미지"></a>
+
         <div id="app"></div>
         <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 
@@ -27,14 +30,11 @@
             <canvas id="space" width="1920" height="1080"></canvas>
 
             <!-- 자기소개 우주선 -->
-           <a href="자기소개.html" target="_blank">
             <canvas id="sship" width="500" height="400"></canvas>
-           </a>
+           
 
            <!-- 최하단 three.js 마크 -->
-            <canvas id="three3" width="200" height="200"></canvas>
-
-
+            <canvas id="three3" width="130" height="130"></canvas>
 
 
 
@@ -52,6 +52,7 @@
             <script type="module">
                 import {GLTFLoader} from 'GLTFLoader';
                 import * as THREE from 'three';
+                import { OrbitControls } from '/three.js-master/examples/jsm/controls/OrbitControls.js';
     
                 let scene = new THREE.Scene();
                 let renderer = new THREE.WebGLRenderer({
@@ -67,6 +68,10 @@
                 let light = new THREE.DirectionalLight(0xfffff0,3);
                 scene.add(light);
                 
+                let controls = new OrbitControls( camera, renderer.domElement);
+                controls.minDistance = 2;
+                controls.maxDistance = 10;
+
                 let loader = new GLTFLoader();
                 loader.load('space/scene.gltf', function(gltf){
                     scene.add(gltf.scene);
@@ -74,6 +79,7 @@
                         requestAnimationFrame(animate)
                         gltf.scene.rotation.y += 0.0002;
                         gltf.scene.rotation.x += 0.0004;
+                        controls.update();
                         renderer.render(scene, camera);
                     }
                     animate()
@@ -84,6 +90,7 @@
             <script type="module" src="sship.js"></script>
             <script type="module" src="3dthree.js"></script>
             <script type="module" src="home.js"></script>
+            <script type="module" src="git3d.js"></script>
             <script src="main.js"></script>
     </section>
 
