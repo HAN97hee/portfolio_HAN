@@ -1,6 +1,6 @@
     import {GLTFLoader} from 'GLTFLoader';
     import * as THREE from 'three';
-    import { OrbitControls } from '/three.js-master/examples/jsm/controls/OrbitControls.js';
+    import { OrbitControls } from './three.js-master/examples/jsm/controls/OrbitControls.js';
 
     let scene = new THREE.Scene();
     let renderer = new THREE.WebGLRenderer({

@@ -1,19 +1,20 @@
 /* 공통요소 css */
-*{ margin:0; padding:0; }
+*{ margin:0; padding:0; 
+  li{ list-style:none; }
+  a{ text-decoration: none; color:inherit; }
+  img{ vertical-align: top; }
+  html{ overflow-x: hidden; }
+  html.fix{overflow: hidden;}
+  body{font-family: 'NSKR', sans-serif; font-size:16px; color:#000; }
+  .wrap{ width: 1500px; margin:0 auto; position: relative; }
+  .wrap:after, ul:after, .cl:after{ content:""; clear: both; display: block; }
+  .blind{ position: absolute; left: -9999px; width: 0; height: 0; font-size:0; overflow: hidden; }
+  .bold{font-weight: bold;}
+}
 
-li{ list-style:none; }
-a{ text-decoration: none; color:inherit; }
-img{ vertical-align: top; }
-html{ overflow-x: hidden; }
-html.fix{overflow: hidden;}
-body{font-family: 'NSKR', sans-serif; font-size:16px; color:#000; }
-.wrap{ width: 1500px; margin:0 auto; position: relative; }
-.wrap:after, ul:after, .cl:after{ content:""; clear: both; display: block; }
-.blind{ position: absolute; left: -9999px; width: 0; height: 0; font-size:0; overflow: hidden; }
-.bold{font-weight: bold;}
-/* .blank{height: 10px;} */
 
-/* main (index.html) css */
+
+/* main (index.html) css ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
 #main{width: 100%; height: 100%; position: relative;
     #space{position: absolute; top: 0; left: 0; z-index: 0;}
     #sship{position: absolute; top: 300px; left: 400px; z-index: 1; background: none; border-radius: 500px; transform: scale(1);
@@ -49,7 +50,8 @@ body{font-family: 'NSKR', sans-serif; font-size:16px; color:#000; }
 }
 
 
-/* 자기소개.html css     */ 
+/* 자기소개.html css  ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */ 
+/*홈페이지 로고 홈앵커 */
 #homeh1{
     width: 10%; height: 80px; position: absolute; top: 20px;
     a{
@@ -58,12 +60,145 @@ body{font-family: 'NSKR', sans-serif; font-size:16px; color:#000; }
     }
     a:hover #home{transform: scale(2);}
 }
+/*비주얼 3d 영역 */
+#in3d{
+    width: 100%; height: 100%; background-color: #000; position: relative;
 
-.abox{position: absolute; top: 550px; left: 100px;}
+    #galaxy{position: fixed;}
+}
+/*자기소개,포폴 알림 전체영역*/
+#infor{
+width: 1200px; height: 700px; background: none; border-left: 3px solid #fff; border-right: 3px solid #fff; overflow: hidden;
+position: relative; top: 100px; left: calc(50% - 600px); z-index: 3;
+
+/*소개, 포폴 안내바*/
+.category{width: 100%; height: 50px; background: none; text-align: center; position: relative; margin-bottom: 15px;
+li:nth-of-type(1){width: 49%; line-height: 50px; font-size: 25px; float: left;}
+li:nth-of-type(2){width: 49%; line-height: 50px; font-size: 25px; float: right;}
+li{opacity: 0.3; background-color: #879988; margin: 0 0.5%; border-radius: 25%;}
+li a{display: block;}
+li.select{background-color: #eee; opacity: 1;}
+}
+
+/*자기소개 내용 영역*/
+.information{
+  width: 99%; height: 100%; background-color: none; margin: 0 auto; position: relative; overflow: auto; display: none;
+  
+  .p1{width: 100%; height: 1500px; position: relative; overflow: scroll hidden;
+
+    .photoinfor{
+      width: 100%; height: 350px; margin-bottom: 15px;
+
+      figure{width: 30%; height: 350px; float: left;
+        img{width: 100%; height: 100%; object-fit: cover;}
+        }
+
+      .name{width: 70%; height: 350px; float: right; box-sizing: border-box; padding: 30px 0 0 20px; font-size: 20px; font-weight: bold; color: #fff;
+
+          ul li{margin-bottom: 25px; 
+            img{width: 20px;}
+          }
+        }
+    }
+
+    .ment{
+      color: #fff; font-size: 17px; width: 100%; height: 150px; box-sizing: border-box; padding: 10px 10px; 
+      line-height: 1.5; margin-bottom: 15px;
+
+      h3{font-size: 30px; margin-bottom: 10px;}
+    }
+
+    .skill{
+      width: 100%; height: 200px; background-color: rgba($color: #fff, $alpha: 0.5); color: #000; box-sizing: border-box;
+      text-align: center; position: relative;
+      h3{padding-top: 10px; font-size: 30px;}
+
+      .skillicon{ width: 100%; margin: 0 auto; height: 154px;
+        li{float: left; margin: 0 35px; width: 100px; height: 100px; background-color: #fff; border-radius: 10px; margin-top: 25px; 
+          img{width: 100px; height: 100px;}
+          img:last-child{width: 80px; height: 80px; box-sizing: border-box; margin: 10px 10px;}
+        }
+        li:last-child{margin-right: 0;}
+      }
+
+      div{width: 700px; height: 400px; background-color: rgba($color: #fff, $alpha: 1.0); display: none; 
+        .content{width: 100%; height: 385px; position: relative; background-color: #fff; box-sizing: border-box; overflow: auto; border-radius: 10px;
+        }
+        a{width: 100%; background-color: #eee; display: block; border-radius: 10px 10px 0 0;
+          i{font-size: 10px; font-weight: bold; color: #000; line-height: 15px;}
+        }
+        
+      }
+      // html 
+      div:nth-of-type(1){position: relative; top: 0; left: 35px; border-radius: 0 10px 10px 10px;
+        .content{
+          p{width: 100px; height: 1300px; background-color: red;}
+        }
+        a{left: 0;}
+      }
+      // css
+      div:nth-of-type(2){position: relative; top: 0; left: 205px; border-radius: 0 10px 10px 10px;
+        .content{
+
+        }
+        a{left: 0;}
+      }
+      // sass
+      div:nth-of-type(3){position: relative; top: 0; left: 375px; border-radius: 0 10px 10px 10px;
+        .content{
+
+        }
+
+        a{left: 0;}
+      }
+      // script
+      div:nth-of-type(4){position: relative; top: 0; left: calc(50% - 350px); border-radius: 10px;
+        .content{
+
+        }
+        a{right: 0;}
+      }
+      // jquery
+      div:nth-of-type(5){position: relative; top: 0; left: 115px; border-radius: 10px 0 10px 10px;
+        .content{
+
+        }
+        a{right: 0;}
+      }
+      // three.js
+      div:nth-of-type(6){position: relative; top: 0; left: 285px; border-radius: 10px 0 10px 10px;
+        .content{
+
+        }
+        a{right: 0;}
+      }
+      // photoshop
+      div:nth-of-type(7){position: relative; top: 0; left: 455px; border-radius: 10px 0 10px 10px;
+        .content{
+
+        }
+        a{right: 0;}
+      }
 
 
+      .on{display: block;}
+    }
+  }
+}
 
+/* 포트폴리오 목록 영역*/
+.portfolio{
+  width: 99%; height: 100%; background-color: #ff1361; position: relative; margin: 0 auto; overflow: auto; display: none;
+  
+  .p2{
+    width: 100%; height: 1800px; position: relative; overflow: scroll hidden;
 
+    h3{font-size: 30px; color: #fff;}
+    div{width: 300px; height: 300px; background-color: #fff800; position: absolute; bottom: 30px; left: 200px;}
+  }
+}
+.on{display: block;}
+}
 
 
 

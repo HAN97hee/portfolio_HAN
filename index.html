@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>한재희 웹 포트폴리오</title>
-    <link rel="shortcut icon" type="image/x-icon" href="이미지/파비콘.png" >
+    <link rel="shortcut icon" type="image/x-icon" href="./이미지/파비콘.png" >
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <link rel="stylesheet" href="style.css">
@@ -16,7 +16,7 @@
     <section id="main">
         <h1 class="blind">hello!</h1>
         <p>Three.js Web Construction <br>jea hee HAN</p>
-        <a href="https://github.com/HAN97hee" target="_blank" class="gitgit"><img src="/이미지/github-logo.svg" alt="깃허브 한재희 페이지이동 이미지"></a>
+        <a href="https://github.com/HAN97hee" target="_blank" class="gitgit"><img src="./이미지/github-logo.svg" alt="깃허브 한재희 페이지이동 이미지"></a>
 
         <div id="app"></div>
         <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
@@ -27,7 +27,7 @@
             </a>
 
             <!-- 우주 메인 배경 3d  -->
-            <canvas id="space" width="1920" height="1080"></canvas>
+            <canvas id="space" width="1920" height="960"></canvas>
 
             <!-- 자기소개 우주선 -->
             <canvas id="sship" width="500" height="400"></canvas>
@@ -52,7 +52,7 @@
             <script type="module">
                 import {GLTFLoader} from 'GLTFLoader';
                 import * as THREE from 'three';
-                import { OrbitControls } from '/three.js-master/examples/jsm/controls/OrbitControls.js';
+                import { OrbitControls } from './three.js-master/examples/jsm/controls/OrbitControls.js';
     
                 let scene = new THREE.Scene();
                 let renderer = new THREE.WebGLRenderer({

@@ -4,31 +4,188 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>신입 퍼블리셔 한재희를 소개합니다.</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./이미지/파비콘.png" >
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- home link  -->
-<h1 id="homeh1"><a href="index.html">
-    <canvas id="home" width="120" height="120"></canvas>
-    <script type="importmap">
-        {
-            "imports": {
-              "three": "https://unpkg.com/three@0.141.0/build/three.module.js",
-              "GLTFLoader" : "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js"
-            }
-          }
-    </script>
-    <script type="module" src="home.js"></script>
-</a></h1>
+    <!-- header home link  -->
+<header>
+    <h1 id="homeh1"><a href="index.html">
+        <canvas id="home" width="120" height="120"></canvas>
+    </a></h1>
+</header>
 
-    <section id="infor">
-        <canvas id="star" width="1920" height="1080"></canvas>
-    </section>
+    <!-- 홈페이지 및 비주얼 3d 영역 -->
+<section id="in3d">
+    <h2 class="blind">비주얼 3d 구역</h2>
+
+    <canvas id="galaxy" width="1920" height="2200"></canvas>
+</section>
+
+    <!-- 자기소개와 포폴 전체영역 -->
+<section id="infor">
+    <h2 class="blind">자기소개영역</h2>
+
+    <!-- 상단 소개, 포폴 안내바 -->
+    <ul class="category">
+        <li class="select">
+            <a href="#none">information</a>
+        </li>
+        <li>
+            <a href="#none">Portfolio</a>
+        </li>
+    </ul>
+
+    <!-- 자기소개영역 -->
+    <div class="information on">
+       <div class="p1">
+
+        <!-- 사진, 인적사항 -->
+        <div class="photoinfor">
+
+            <figure>   
+                    <img src="./이미지/me.jpeg" alt="한재희 사진" style="display: none;">
+                    <img src="./이미지/IMG_2520.GIF" alt="서브이미지">
+            </figure> 
+
+            <div class="name">
+                <ul>
+                    <li>name - 한 재 희 &nbsp;&nbsp;( HAN jea hee )</li>
+                    <li>age - 27 &nbsp;(1997.06.19)</li>
+                    <li>e-mail - <a href="mailto:"gks1wo2gml3@gmail.com>(Google) _ gks1wo2gml3@gmail.com</a><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+                        <a href="https://github.com/HAN97hee" target="_blank">(GitHub) _ https://github.com/HAN97hee</a>
+                    </li>
+                    <li>Address - 인천광역시 미추홀구 도화동 [ 인천 더샵 스카이타워 2단지 203동 1506호 ]</li>
+                    <li>Phone number - <a href="tel:01040747095">010-4074-7095</a></li>
+                    <li><img src="./이미지/카톡.png" alt="kakao img"> kakao ID - HAN_hee97</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 간단 멘트 -->
+        <div class="ment">
+            <h3>Hello!</h3>
+            <p>웹 퍼블리싱 공부를 시작한 지 이제 5개월이 좀 안 된 것 같지만 여러 프로그래밍 도구에 관심을 가지고 모험하는 정신으로 즐기는 웹 퍼블리셔 준비생 한재희입니다.<br>
+                웹 퍼블리싱을 할 때의 저는 다양한 디자인들을 브라우저 안에 띄워낼 때 즐거움을 느낍니다.
+            </p>
+        </div>
+
+        <!-- 사용스킬 안내  -->
+        <div class="skill">
+            <h3>SKILL</h3>
+            <!-- 스킬 아이콘 -->
+            <ul class="skillicon">
+                <li><img src="./이미지/html이미지.png" alt="html img"></li>
+                <li><img src="./이미지/css.jpeg" alt="css img"></li>
+                <li><img src="./이미지/sass.png" alt="sass img"></li>
+                <li><img src="./이미지/js.jpeg" alt="js img"></li>
+                <li><img src="./이미지/jquery.png" alt="jq img"></li>
+                <li><img src="./이미지/three.png" alt="three img"></li>
+                <li><img src="./이미지/포토샵.png" alt="photoshop img"></li>
+            </ul>
+
+            <!-- 스킬 별 안내  -->
+            <!-- html  -->
+            <div>
+                <a href="#none"><i class="xi-close"></i></a>
+                <section class="content">
+                    <p>dasdasd</p>
+                </section>
+            </div>
+
+            <!-- css  -->
+            <div>
+                <a href="#none"><i class="xi-close"></i></a>
+                <section class="content">
+
+                </section>
+            </div>
+
+            <!-- sass  -->
+            <div>
+                <a href="#none"><i class="xi-close"></i></a>
+                <section class="content">
+
+                </section>
+            </div>
+
+            <!-- script  -->
+            <div>
+                <a href="#none"><i class="xi-close"></i></a>
+                <section class="content">
+
+                </section>
+            </div>
+
+            <!-- jquery  -->
+            <div>
+                <a href="#none"><i class="xi-close"></i></a>
+                <section class="content">
+
+                </section>
+            </div>
+
+            <!-- three.js  -->
+            <div>
+                <a href="#none"><i class="xi-close"></i></a>
+                <section class="content">
+
+                </section>
+            </div>
+
+            <!-- photoshop  -->
+            <div>
+                <a href="#none"><i class="xi-close"></i></a>
+                <section class="content">
+
+                </section>
+            </div>
+        </div>
+
+       </div>
+    </div>
+
+    <!-- 포트폴리오 목록 -->
+    <div class="portfolio">
+        <div class="p2">
 
 
-    <script type="module" src="star.js"></script>
+         <h3>asdasdasdasda</h3>
+         <div>dvvdvddvdvdvd</div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- script area  -->
+<script src="자기소개.js"></script>
+<script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.141.0/build/three.module.js",
+            "GLTFLoader" : "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js"
+        }
+    }
+</script>
+<script type="module" src="home.js"></script>
+<script type="module" src="galaxy.js"></script>
 
 </body>
 

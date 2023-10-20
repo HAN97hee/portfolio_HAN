@@ -4,47 +4,38 @@
   margin: 0;
   padding: 0;
 }
-
-li {
+* li {
   list-style: none;
 }
-
-a {
+* a {
   text-decoration: none;
   color: inherit;
 }
-
-img {
+* img {
   vertical-align: top;
 }
-
-html {
+* html {
   overflow-x: hidden;
 }
-
-html.fix {
+* html.fix {
   overflow: hidden;
 }
-
-body {
+* body {
   font-family: "NSKR", sans-serif;
   font-size: 16px;
   color: #000;
 }
-
-.wrap {
+* .wrap {
   width: 1500px;
   margin: 0 auto;
   position: relative;
 }
-
-.wrap:after, ul:after, .cl:after {
+* .wrap:after, * ul:after, * .cl:after {
   content: "";
   clear: both;
   display: block;
 }
-
-.blind {
+* .blind {
   position: absolute;
   left: -9999px;
   width: 0;
@@ -52,13 +43,11 @@ body {
   font-size: 0;
   overflow: hidden;
 }
-
-.bold {
+* .bold {
   font-weight: bold;
 }
 
-/* .blank{height: 10px;} */
-/* main (index.html) css */
+/* main (index.html) css ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
 #main {
   width: 100%;
   height: 100%;
@@ -149,7 +138,8 @@ body {
   }
 }
 
-/* 자기소개.html css     */
+/* 자기소개.html css  ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+/*홈페이지 로고 홈앵커 */
 #homeh1 {
   width: 10%;
   height: 80px;
@@ -169,8 +159,292 @@ body {
   transform: scale(2);
 }
 
-.abox {
+/*비주얼 3d 영역 */
+#in3d {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  position: relative;
+}
+#in3d #galaxy {
+  position: fixed;
+}
+
+/*자기소개,포폴 알림 전체영역*/
+#infor {
+  width: 1200px;
+  height: 700px;
+  background: none;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #fff;
+  overflow: hidden;
+  position: relative;
+  top: 100px;
+  left: calc(50% - 600px);
+  z-index: 3;
+  /*소개, 포폴 안내바*/
+  /*자기소개 내용 영역*/
+  /* 포트폴리오 목록 영역*/
+}
+#infor .category {
+  width: 100%;
+  height: 50px;
+  background: none;
+  text-align: center;
+  position: relative;
+  margin-bottom: 15px;
+}
+#infor .category li:nth-of-type(1) {
+  width: 49%;
+  line-height: 50px;
+  font-size: 25px;
+  float: left;
+}
+#infor .category li:nth-of-type(2) {
+  width: 49%;
+  line-height: 50px;
+  font-size: 25px;
+  float: right;
+}
+#infor .category li {
+  opacity: 0.3;
+  background-color: #879988;
+  margin: 0 0.5%;
+  border-radius: 25%;
+}
+#infor .category li a {
+  display: block;
+}
+#infor .category li.select {
+  background-color: #eee;
+  opacity: 1;
+}
+#infor .information {
+  width: 99%;
+  height: 100%;
+  background-color: none;
+  margin: 0 auto;
+  position: relative;
+  overflow: auto;
+  display: none;
+}
+#infor .information .p1 {
+  width: 100%;
+  height: 1500px;
+  position: relative;
+  overflow: scroll hidden;
+}
+#infor .information .p1 .photoinfor {
+  width: 100%;
+  height: 350px;
+  margin-bottom: 15px;
+}
+#infor .information .p1 .photoinfor figure {
+  width: 30%;
+  height: 350px;
+  float: left;
+}
+#infor .information .p1 .photoinfor figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#infor .information .p1 .photoinfor .name {
+  width: 70%;
+  height: 350px;
+  float: right;
+  box-sizing: border-box;
+  padding: 30px 0 0 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+#infor .information .p1 .photoinfor .name ul li {
+  margin-bottom: 25px;
+}
+#infor .information .p1 .photoinfor .name ul li img {
+  width: 20px;
+}
+#infor .information .p1 .ment {
+  color: #fff;
+  font-size: 17px;
+  width: 100%;
+  height: 150px;
+  box-sizing: border-box;
+  padding: 10px 10px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+#infor .information .p1 .ment h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+#infor .information .p1 .skill {
+  width: 100%;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+}
+#infor .information .p1 .skill h3 {
+  padding-top: 10px;
+  font-size: 30px;
+}
+#infor .information .p1 .skill .skillicon {
+  width: 100%;
+  margin: 0 auto;
+  height: 154px;
+}
+#infor .information .p1 .skill .skillicon li {
+  float: left;
+  margin: 0 35px;
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-top: 25px;
+}
+#infor .information .p1 .skill .skillicon li img {
+  width: 100px;
+  height: 100px;
+}
+#infor .information .p1 .skill .skillicon li img:last-child {
+  width: 80px;
+  height: 80px;
+  box-sizing: border-box;
+  margin: 10px 10px;
+}
+#infor .information .p1 .skill .skillicon li:last-child {
+  margin-right: 0;
+}
+#infor .information .p1 .skill div {
+  width: 700px;
+  height: 400px;
+  background-color: white;
+  display: none;
+}
+#infor .information .p1 .skill div .content {
+  width: 100%;
+  height: 385px;
+  position: relative;
+  background-color: #fff;
+  box-sizing: border-box;
+  overflow: auto;
+  border-radius: 10px;
+}
+#infor .information .p1 .skill div a {
+  width: 100%;
+  background-color: #eee;
+  display: block;
+  border-radius: 10px 10px 0 0;
+}
+#infor .information .p1 .skill div a i {
+  font-size: 10px;
+  font-weight: bold;
+  color: #000;
+  line-height: 15px;
+}
+#infor .information .p1 .skill div:nth-of-type(1) {
+  position: relative;
+  top: 0;
+  left: 35px;
+  border-radius: 0 10px 10px 10px;
+}
+#infor .information .p1 .skill div:nth-of-type(1) .content p {
+  width: 100px;
+  height: 1300px;
+  background-color: red;
+}
+#infor .information .p1 .skill div:nth-of-type(1) a {
+  left: 0;
+}
+#infor .information .p1 .skill div:nth-of-type(2) {
+  position: relative;
+  top: 0;
+  left: 205px;
+  border-radius: 0 10px 10px 10px;
+}
+#infor .information .p1 .skill div:nth-of-type(2) a {
+  left: 0;
+}
+#infor .information .p1 .skill div:nth-of-type(3) {
+  position: relative;
+  top: 0;
+  left: 375px;
+  border-radius: 0 10px 10px 10px;
+}
+#infor .information .p1 .skill div:nth-of-type(3) a {
+  left: 0;
+}
+#infor .information .p1 .skill div:nth-of-type(4) {
+  position: relative;
+  top: 0;
+  left: calc(50% - 350px);
+  border-radius: 10px;
+}
+#infor .information .p1 .skill div:nth-of-type(4) a {
+  right: 0;
+}
+#infor .information .p1 .skill div:nth-of-type(5) {
+  position: relative;
+  top: 0;
+  left: 115px;
+  border-radius: 10px 0 10px 10px;
+}
+#infor .information .p1 .skill div:nth-of-type(5) a {
+  right: 0;
+}
+#infor .information .p1 .skill div:nth-of-type(6) {
+  position: relative;
+  top: 0;
+  left: 285px;
+  border-radius: 10px 0 10px 10px;
+}
+#infor .information .p1 .skill div:nth-of-type(6) a {
+  right: 0;
+}
+#infor .information .p1 .skill div:nth-of-type(7) {
+  position: relative;
+  top: 0;
+  left: 455px;
+  border-radius: 10px 0 10px 10px;
+}
+#infor .information .p1 .skill div:nth-of-type(7) a {
+  right: 0;
+}
+#infor .information .p1 .skill .on {
+  display: block;
+}
+#infor .portfolio {
+  width: 99%;
+  height: 100%;
+  background-color: #ff1361;
+  position: relative;
+  margin: 0 auto;
+  overflow: auto;
+  display: none;
+}
+#infor .portfolio .p2 {
+  width: 100%;
+  height: 1800px;
+  position: relative;
+  overflow: scroll hidden;
+}
+#infor .portfolio .p2 h3 {
+  font-size: 30px;
+  color: #fff;
+}
+#infor .portfolio .p2 div {
+  width: 300px;
+  height: 300px;
+  background-color: #fff800;
   position: absolute;
-  top: 550px;
-  left: 100px;
+  bottom: 30px;
+  left: 200px;
+}
+#infor .on {
+  display: block;
 }/*# sourceMappingURL=style.css.map */
