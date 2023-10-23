@@ -1,4 +1,15 @@
 @charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@font-face {
+  font-family: "DOSG";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSGothic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.notosanskr * {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
 /* 공통요소 css */
 * {
   margin: 0;
@@ -21,7 +32,7 @@
   overflow: hidden;
 }
 * body {
-  font-family: "NSKR", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
   color: #000;
 }
@@ -257,14 +268,15 @@
   box-sizing: border-box;
   padding: 30px 0 0 20px;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 600;
   color: #fff;
 }
 #infor .information .p1 .photoinfor .name ul li {
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 }
 #infor .information .p1 .photoinfor .name ul li img {
-  width: 20px;
+  width: 25px;
+  padding-top: 3px;
 }
 #infor .information .p1 .ment {
   color: #fff;
@@ -291,7 +303,7 @@
 }
 #infor .information .p1 .skill h3 {
   padding-top: 10px;
-  font-size: 30px;
+  font-size: 25px;
 }
 #infor .information .p1 .skill .skillicon {
   width: 100%;
@@ -424,13 +436,13 @@
 }
 #infor .information .p1 .skill section:nth-of-type(1) .content .htmltext2 p {
   font-size: 16px;
-  padding: 20px 40px;
-  line-height: 2;
-  width: 320px;
+  padding: 40px 30px;
+  line-height: 1.7;
+  width: 340px;
   height: 150px;
   background-color: #eee;
   position: absolute;
-  top: 45px;
+  top: 25px;
   right: 0;
   border-radius: 10px 0 0 10px;
   text-align: center;
@@ -515,7 +527,7 @@
 }
 #infor .information .p1 .skill section:nth-of-type(2) .content .csstext2 p {
   font-size: 16px;
-  padding: 90px 40px;
+  padding: 80px 40px;
   background-color: skyblue;
   width: 400px;
   height: 250px;
@@ -709,7 +721,7 @@
   left: calc(50% - 225px);
   color: #fff;
   box-sizing: border-box;
-  padding-top: 22px;
+  padding-top: 18px;
   border-radius: 10px;
 }
 #infor .information .p1 .skill section:nth-of-type(4) a {
