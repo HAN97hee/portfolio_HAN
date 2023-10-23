@@ -27,20 +27,22 @@ $(".category li").click(function(){
      $(".skill > div").removeClass("on");
      $(".skillicon > li").css({"margin-top":"25px","border-radius":"10px"});
  });
-*/
+ */
+ 
+
+
 
 
 /* 마우스 호버시 안내 스크립트*/
-
 // 마우스 올라갔을 때
-$(".skillicon li").on("mouseover focusin",function(){   
+$(".skillicon li").on("mouseover focusin",function(){  
     var num = $(this).index();
-    var up = $(".skill > div").eq(num).addClass("on").siblings().removeClass("on");
+    var up = $(".skill > section").eq(num).addClass("on").siblings().removeClass("on");
     
     $(this).css({"margin-top":"54px","border-radius":"10px 10px 0 0"}).siblings().css({"margin-top":"25px","border-radius":"10px"});
 });
 
-$(".skill >div").on("mouseover focusin",function(){   
+$(".skill > section").on("mouseover focusin",function(){   
     var num = $(this).index() -2;
     $(".skillicon li").eq(num).css({"margin-top":"54px","border-radius":"10px 10px 0 0"}).siblings().css({"margin-top":"25px","border-radius":"10px"});
 
@@ -49,10 +51,18 @@ $(".skill >div").on("mouseover focusin",function(){
 
 
 // 마우스 빠졌을 때
-$(".skillicon li, .skill > div").on("mouseleave focusin",function(){   
-    $(".skill > div").removeClass("on");
+$(".skillicon li, .skill > section").on("mouseleave focusin",function(){   
+    $(".skill > section").removeClass("on");
     $(".skillicon > li").css({"margin-top":"25px","border-radius":"10px"});
 });
+
+
+
+
+
+
+
+
 
 
 

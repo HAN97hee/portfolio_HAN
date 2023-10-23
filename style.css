@@ -320,13 +320,13 @@
 #infor .information .p1 .skill .skillicon li:last-child {
   margin-right: 0;
 }
-#infor .information .p1 .skill div {
+#infor .information .p1 .skill section {
   width: 700px;
   height: 400px;
   background-color: white;
   display: none;
 }
-#infor .information .p1 .skill div .content {
+#infor .information .p1 .skill section .content {
   width: 100%;
   height: 385px;
   position: relative;
@@ -335,84 +335,555 @@
   overflow: auto;
   border-radius: 10px;
 }
-#infor .information .p1 .skill div a {
+#infor .information .p1 .skill section a {
   width: 100%;
   background-color: #eee;
   display: block;
   border-radius: 10px 10px 0 0;
 }
-#infor .information .p1 .skill div a i {
+#infor .information .p1 .skill section a i {
   font-size: 10px;
   font-weight: bold;
   color: #000;
   line-height: 15px;
 }
-#infor .information .p1 .skill div:nth-of-type(1) {
+#infor .information .p1 .skill section:nth-of-type(1) {
   position: relative;
   top: 0;
   left: 35px;
   border-radius: 0 10px 10px 10px;
 }
-#infor .information .p1 .skill div:nth-of-type(1) .content p {
-  width: 100px;
-  height: 1300px;
-  background-color: red;
+#infor .information .p1 .skill section:nth-of-type(1) .content .progress {
+  width: 160px;
+  height: 160px;
+  position: relative;
+  top: 30px;
+  left: 30px;
 }
-#infor .information .p1 .skill div:nth-of-type(1) a {
+#infor .information .p1 .skill section:nth-of-type(1) .content .progress .outer {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  padding: 19px;
+  box-sizing: border-box;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.45), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+#infor .information .p1 .skill section:nth-of-type(1) .content .progress .outer .inner {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.5), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7), -0.5px -0.5px 0px white, 0.5px 0.5px 0px rgba(0, 0, 0, 0.2), 0px 12px 10px -10px rgba(0, 0, 0, 0.5);
+}
+#infor .information .p1 .skill section:nth-of-type(1) .content .progress .outer .inner #number {
+  font-size: 20px;
+  font-weight: bold;
+  color: #777;
+}
+#infor .information .p1 .skill section:nth-of-type(1) .content circle {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+  animation: anim1 1.5s linear forwards;
+}
+#infor .information .p1 .skill section:nth-of-type(1) .content .svg1 {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  transform: rotate(-85deg);
+}
+@keyframes anim1 {
+  100% {
+    stroke-dashoffset: 60;
+  }
+}
+#infor .information .p1 .skill section:nth-of-type(1) .content .htmltext {
+  width: 100%;
+  height: 200px;
+  padding-left: 190px;
+  box-sizing: border-box;
+  margin-top: -120px;
+}
+#infor .information .p1 .skill section:nth-of-type(1) .content .htmltext h3 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+#infor .information .p1 .skill section:nth-of-type(1) .content .htmltext2 {
+  text-align: left;
+  position: relative;
+}
+#infor .information .p1 .skill section:nth-of-type(1) .content .htmltext2 img {
+  width: 50%;
+  border-radius: 0 10px 10px 0;
+  margin-right: 10px;
+  margin-bottom: 50px;
+}
+#infor .information .p1 .skill section:nth-of-type(1) .content .htmltext2 p {
+  font-size: 16px;
+  padding: 20px 40px;
+  line-height: 2;
+  width: 320px;
+  height: 150px;
+  background-color: #eee;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  border-radius: 10px 0 0 10px;
+  text-align: center;
+}
+#infor .information .p1 .skill section:nth-of-type(1) a {
   left: 0;
 }
-#infor .information .p1 .skill div:nth-of-type(2) {
+#infor .information .p1 .skill section:nth-of-type(2) {
   position: relative;
   top: 0;
   left: 205px;
   border-radius: 0 10px 10px 10px;
 }
-#infor .information .p1 .skill div:nth-of-type(2) a {
+#infor .information .p1 .skill section:nth-of-type(2) .content .progress {
+  width: 160px;
+  height: 160px;
+  position: relative;
+  top: 30px;
+  left: 30px;
+}
+#infor .information .p1 .skill section:nth-of-type(2) .content .progress .outer {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  padding: 19px;
+  box-sizing: border-box;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.45), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+#infor .information .p1 .skill section:nth-of-type(2) .content .progress .outer .inner {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.5), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7), -0.5px -0.5px 0px white, 0.5px 0.5px 0px rgba(0, 0, 0, 0.2), 0px 12px 10px -10px rgba(0, 0, 0, 0.5);
+}
+#infor .information .p1 .skill section:nth-of-type(2) .content .progress .outer .inner #number {
+  font-size: 20px;
+  font-weight: bold;
+  color: #777;
+}
+#infor .information .p1 .skill section:nth-of-type(2) .content circle {
+  fill: none;
+  stroke: url(#GradientColor2);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+  animation: anim2 1.5s linear forwards;
+}
+#infor .information .p1 .skill section:nth-of-type(2) .content .svg2 {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  transform: rotate(-85deg);
+}
+@keyframes anim2 {
+  100% {
+    stroke-dashoffset: 60;
+  }
+}
+#infor .information .p1 .skill section:nth-of-type(2) .content .csstext {
+  width: 100%;
+  height: 200px;
+  padding-left: 150px;
+  box-sizing: border-box;
+  margin-top: -120px;
+}
+#infor .information .p1 .skill section:nth-of-type(2) .content .csstext h3 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+#infor .information .p1 .skill section:nth-of-type(2) .content .csstext2 {
+  text-align: left;
+  position: relative;
+}
+#infor .information .p1 .skill section:nth-of-type(2) .content .csstext2 img {
+  width: 50%;
+  float: right;
+  border-radius: 10px 0 0 10px;
+  margin-top: 25px;
+}
+#infor .information .p1 .skill section:nth-of-type(2) .content .csstext2 p {
+  font-size: 16px;
+  padding: 90px 40px;
+  background-color: skyblue;
+  width: 400px;
+  height: 250px;
+  border-radius: 0 10px 10px 0;
+  line-height: 2;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+#infor .information .p1 .skill section:nth-of-type(2) .content .csstext3 {
+  position: relative;
+}
+#infor .information .p1 .skill section:nth-of-type(2) .content .csstext3 img {
+  width: 50%;
+  height: 200px;
+  float: left;
+}
+#infor .information .p1 .skill section:nth-of-type(2) .content .csstext3 p {
+  width: 600px;
+  line-height: 30px;
+  background-color: skyblue;
+  position: absolute;
+  top: 150px;
+  left: calc(50% - 300px);
+  border-radius: 10px;
+  padding: 20px 0;
+}
+#infor .information .p1 .skill section:nth-of-type(2) a {
   left: 0;
 }
-#infor .information .p1 .skill div:nth-of-type(3) {
+#infor .information .p1 .skill section:nth-of-type(3) {
   position: relative;
   top: 0;
   left: 375px;
   border-radius: 0 10px 10px 10px;
 }
-#infor .information .p1 .skill div:nth-of-type(3) a {
+#infor .information .p1 .skill section:nth-of-type(3) .content .progress {
+  width: 160px;
+  height: 160px;
+  position: relative;
+  top: 30px;
+  left: 30px;
+}
+#infor .information .p1 .skill section:nth-of-type(3) .content .progress .outer {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  padding: 19px;
+  box-sizing: border-box;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.45), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+#infor .information .p1 .skill section:nth-of-type(3) .content .progress .outer .inner {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.5), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7), -0.5px -0.5px 0px white, 0.5px 0.5px 0px rgba(0, 0, 0, 0.2), 0px 12px 10px -10px rgba(0, 0, 0, 0.5);
+}
+#infor .information .p1 .skill section:nth-of-type(3) .content .progress .outer .inner #number {
+  font-size: 20px;
+  font-weight: bold;
+  color: #777;
+}
+#infor .information .p1 .skill section:nth-of-type(3) .content circle {
+  fill: none;
+  stroke: url(#GradientColor3);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+  animation: anim3 1.5s linear forwards;
+}
+#infor .information .p1 .skill section:nth-of-type(3) .content .svg3 {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  transform: rotate(-85deg);
+}
+@keyframes anim3 {
+  100% {
+    stroke-dashoffset: 190;
+  }
+}
+#infor .information .p1 .skill section:nth-of-type(3) .content .sasstext {
+  width: 100%;
+  height: 200px;
+  padding-left: 150px;
+  box-sizing: border-box;
+  margin-top: -120px;
+}
+#infor .information .p1 .skill section:nth-of-type(3) .content .sasstext h3 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+#infor .information .p1 .skill section:nth-of-type(3) .content .sasstext2 {
+  position: relative;
+}
+#infor .information .p1 .skill section:nth-of-type(3) .content .sasstext2 img {
+  width: 50%;
+  float: left;
+  border-radius: 0 10px 10px 0;
+}
+#infor .information .p1 .skill section:nth-of-type(3) .content .sasstext2 p {
+  font-size: 16px;
+  line-height: 2;
+  padding-top: 55px;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+}
+#infor .information .p1 .skill section:nth-of-type(3) a {
   left: 0;
 }
-#infor .information .p1 .skill div:nth-of-type(4) {
+#infor .information .p1 .skill section:nth-of-type(4) {
   position: relative;
   top: 0;
   left: calc(50% - 350px);
   border-radius: 10px;
 }
-#infor .information .p1 .skill div:nth-of-type(4) a {
+#infor .information .p1 .skill section:nth-of-type(4) .content .progress {
+  width: 160px;
+  height: 160px;
+  position: relative;
+  top: 30px;
+  left: 30px;
+}
+#infor .information .p1 .skill section:nth-of-type(4) .content .progress .outer {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  padding: 19px;
+  box-sizing: border-box;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.45), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+#infor .information .p1 .skill section:nth-of-type(4) .content .progress .outer .inner {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.5), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7), -0.5px -0.5px 0px white, 0.5px 0.5px 0px rgba(0, 0, 0, 0.2), 0px 12px 10px -10px rgba(0, 0, 0, 0.5);
+}
+#infor .information .p1 .skill section:nth-of-type(4) .content .progress .outer .inner #number {
+  font-size: 20px;
+  font-weight: bold;
+  color: #777;
+}
+#infor .information .p1 .skill section:nth-of-type(4) .content circle {
+  fill: none;
+  stroke: url(#GradientColor4);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+  animation: anim4 1.5s linear forwards;
+}
+#infor .information .p1 .skill section:nth-of-type(4) .content .svg4 {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  transform: rotate(-85deg);
+}
+@keyframes anim4 {
+  100% {
+    stroke-dashoffset: 330;
+  }
+}
+#infor .information .p1 .skill section:nth-of-type(4) .content .scripttext {
+  width: 100%;
+  height: 200px;
+  padding-left: 170px;
+  box-sizing: border-box;
+  margin-top: -110px;
+}
+#infor .information .p1 .skill section:nth-of-type(4) .content .scripttext h3 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+#infor .information .p1 .skill section:nth-of-type(4) .content .scripttext2 {
+  position: relative;
+}
+#infor .information .p1 .skill section:nth-of-type(4) .content .scripttext2 img {
+  width: 50%;
+  float: left;
+}
+#infor .information .p1 .skill section:nth-of-type(4) .content .scripttext2 p {
+  width: 450px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 100px;
+  left: calc(50% - 225px);
+  color: #fff;
+  box-sizing: border-box;
+  padding-top: 22px;
+  border-radius: 10px;
+}
+#infor .information .p1 .skill section:nth-of-type(4) a {
   right: 0;
 }
-#infor .information .p1 .skill div:nth-of-type(5) {
+#infor .information .p1 .skill section:nth-of-type(5) {
   position: relative;
   top: 0;
   left: 115px;
   border-radius: 10px 0 10px 10px;
 }
-#infor .information .p1 .skill div:nth-of-type(5) a {
+#infor .information .p1 .skill section:nth-of-type(5) .content .progress {
+  width: 160px;
+  height: 160px;
+  position: relative;
+  top: 30px;
+  left: 30px;
+}
+#infor .information .p1 .skill section:nth-of-type(5) .content .progress .outer {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  padding: 19px;
+  box-sizing: border-box;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.45), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+#infor .information .p1 .skill section:nth-of-type(5) .content .progress .outer .inner {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.5), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7), -0.5px -0.5px 0px white, 0.5px 0.5px 0px rgba(0, 0, 0, 0.2), 0px 12px 10px -10px rgba(0, 0, 0, 0.5);
+}
+#infor .information .p1 .skill section:nth-of-type(5) .content .progress .outer .inner #number {
+  font-size: 20px;
+  font-weight: bold;
+  color: #777;
+}
+#infor .information .p1 .skill section:nth-of-type(5) .content circle {
+  fill: none;
+  stroke: url(#GradientColor5);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+  animation: anim5 1.5s linear forwards;
+}
+#infor .information .p1 .skill section:nth-of-type(5) .content .svg5 {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  transform: rotate(-85deg);
+}
+@keyframes anim5 {
+  100% {
+    stroke-dashoffset: 225;
+  }
+}
+#infor .information .p1 .skill section:nth-of-type(5) a {
   right: 0;
 }
-#infor .information .p1 .skill div:nth-of-type(6) {
+#infor .information .p1 .skill section:nth-of-type(6) {
   position: relative;
   top: 0;
   left: 285px;
   border-radius: 10px 0 10px 10px;
 }
-#infor .information .p1 .skill div:nth-of-type(6) a {
+#infor .information .p1 .skill section:nth-of-type(6) .content .progress {
+  width: 160px;
+  height: 160px;
+  position: relative;
+  top: 30px;
+  left: 30px;
+}
+#infor .information .p1 .skill section:nth-of-type(6) .content .progress .outer {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  padding: 19px;
+  box-sizing: border-box;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.45), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+#infor .information .p1 .skill section:nth-of-type(6) .content .progress .outer .inner {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.5), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7), -0.5px -0.5px 0px white, 0.5px 0.5px 0px rgba(0, 0, 0, 0.2), 0px 12px 10px -10px rgba(0, 0, 0, 0.5);
+}
+#infor .information .p1 .skill section:nth-of-type(6) .content .progress .outer .inner #number {
+  font-size: 20px;
+  font-weight: bold;
+  color: #777;
+}
+#infor .information .p1 .skill section:nth-of-type(6) .content circle {
+  fill: none;
+  stroke: url(#GradientColor6);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+  animation: anim6 1.5s linear forwards;
+}
+#infor .information .p1 .skill section:nth-of-type(6) .content .svg6 {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  transform: rotate(-85deg);
+}
+@keyframes anim6 {
+  100% {
+    stroke-dashoffset: 440;
+  }
+}
+#infor .information .p1 .skill section:nth-of-type(6) a {
   right: 0;
 }
-#infor .information .p1 .skill div:nth-of-type(7) {
+#infor .information .p1 .skill section:nth-of-type(7) {
   position: relative;
   top: 0;
   left: 455px;
   border-radius: 10px 0 10px 10px;
 }
-#infor .information .p1 .skill div:nth-of-type(7) a {
+#infor .information .p1 .skill section:nth-of-type(7) .content .progress {
+  width: 160px;
+  height: 160px;
+  position: relative;
+  top: 30px;
+  left: 30px;
+}
+#infor .information .p1 .skill section:nth-of-type(7) .content .progress .outer {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  padding: 19px;
+  box-sizing: border-box;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.45), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+#infor .information .p1 .skill section:nth-of-type(7) .content .progress .outer .inner {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.5), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7), -0.5px -0.5px 0px white, 0.5px 0.5px 0px rgba(0, 0, 0, 0.2), 0px 12px 10px -10px rgba(0, 0, 0, 0.5);
+}
+#infor .information .p1 .skill section:nth-of-type(7) .content .progress .outer .inner #number {
+  font-size: 20px;
+  font-weight: bold;
+  color: #777;
+}
+#infor .information .p1 .skill section:nth-of-type(7) .content circle {
+  fill: none;
+  stroke: url(#GradientColor7);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+  animation: anim7 1.5s linear forwards;
+}
+#infor .information .p1 .skill section:nth-of-type(7) .content .svg7 {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  transform: rotate(-85deg);
+}
+@keyframes anim7 {
+  100% {
+    stroke-dashoffset: 190;
+  }
+}
+#infor .information .p1 .skill section:nth-of-type(7) a {
   right: 0;
 }
 #infor .information .p1 .skill .on {

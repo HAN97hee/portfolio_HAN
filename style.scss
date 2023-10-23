@@ -121,7 +121,7 @@ li.select{background-color: #eee; opacity: 1;}
         li:last-child{margin-right: 0;}
       }
 
-      div{width: 700px; height: 400px; background-color: rgba($color: #fff, $alpha: 1.0); display: none; 
+      section{width: 700px; height: 400px; background-color: rgba($color: #fff, $alpha: 1.0); display: none;
         .content{width: 100%; height: 385px; position: relative; background-color: #fff; box-sizing: border-box; overflow: auto; border-radius: 10px;
         }
         a{width: 100%; background-color: #eee; display: block; border-radius: 10px 10px 0 0;
@@ -130,52 +130,231 @@ li.select{background-color: #eee; opacity: 1;}
         
       }
       // html 
-      div:nth-of-type(1){position: relative; top: 0; left: 35px; border-radius: 0 10px 10px 10px;
+      section:nth-of-type(1){position: relative; top: 0; left: 35px; border-radius: 0 10px 10px 10px;
         .content{
-          p{width: 100px; height: 1300px; background-color: red;}
+          //원형 프로그래스바
+          .progress{width: 160px; height: 160px; position: relative; top: 30px; left: 30px;
+            .outer{width: 160px; height: 160px; border-radius: 50%; padding: 19px; box-sizing: border-box;
+                    box-shadow: 6px 6px 10px -1px rgba($color: #000000, $alpha: 0.45),
+                                -6px -6px 10px -1px rgba($color: #ffffff, $alpha: 0.7);
+
+              .inner{width: 120px; height: 120px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+                    box-shadow: inset 4px 4px 6px -1px rgba($color: #000000, $alpha: 0.5),
+                                inset -4px -4px 6px -1px rgba($color: #ffffff, $alpha: 0.7),
+                                -0.5px -0.5px 0px rgba($color: #ffffff, $alpha: 1.0),
+                                0.5px 0.5px 0px rgba($color: #000000, $alpha: 0.2),
+                                0px 12px 10px -10px rgba($color: #000000, $alpha: 0.5);
+
+                #number{font-size: 20px; font-weight: bold; color: #777;}
+              }
+            }
+          }
+          circle{fill: none; stroke: url(#GradientColor); stroke-width: 20px; stroke-dasharray: 472; stroke-dashoffset: 472; animation: anim1 1.5s linear forwards;}
+          .svg1{position: absolute; top: 30px; left: 30px; transform: rotate(-85deg);}
+          @keyframes anim1 {100% {stroke-dashoffset: 60;}}
+
+          .htmltext{width: 100%; height: 200px; padding-left: 190px; box-sizing: border-box; margin-top: -120px;
+            h3{font-size: 50px; margin-bottom: 20px;}
+          }
+          .htmltext2{ text-align: left; position: relative;
+            img{width: 50%; border-radius: 0 10px 10px 0; margin-right: 10px; margin-bottom: 50px;}
+            p{font-size: 16px; padding: 20px 40px; line-height: 2; width: 320px; height: 150px; background-color: #eee; position: absolute; top: 45px; right: 0; border-radius: 10px 0 0 10px; text-align: center;}
+          }
+          
         }
         a{left: 0;}
       }
       // css
-      div:nth-of-type(2){position: relative; top: 0; left: 205px; border-radius: 0 10px 10px 10px;
+      section:nth-of-type(2){position: relative; top: 0; left: 205px; border-radius: 0 10px 10px 10px; 
         .content{
+          //원형 프로그래스바
+          .progress{width: 160px; height: 160px; position: relative; top: 30px; left: 30px;
+            .outer{width: 160px; height: 160px; border-radius: 50%; padding: 19px; box-sizing: border-box;
+                    box-shadow: 6px 6px 10px -1px rgba($color: #000000, $alpha: 0.45),
+                                -6px -6px 10px -1px rgba($color: #ffffff, $alpha: 0.7);
+
+              .inner{width: 120px; height: 120px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+                    box-shadow: inset 4px 4px 6px -1px rgba($color: #000000, $alpha: 0.5),
+                                inset -4px -4px 6px -1px rgba($color: #ffffff, $alpha: 0.7),
+                                -0.5px -0.5px 0px rgba($color: #ffffff, $alpha: 1.0),
+                                0.5px 0.5px 0px rgba($color: #000000, $alpha: 0.2),
+                                0px 12px 10px -10px rgba($color: #000000, $alpha: 0.5);
+
+                #number{font-size: 20px; font-weight: bold; color: #777;}
+              }
+            }
+          }
+          circle{fill: none; stroke: url(#GradientColor2); stroke-width: 20px; stroke-dasharray: 472; stroke-dashoffset: 472; animation: anim2 1.5s linear forwards;}
+          .svg2{position: absolute; top: 30px; left: 30px; transform: rotate(-85deg);}
+          @keyframes anim2 {100% {stroke-dashoffset: 60;}}
+
+          .csstext{width: 100%; height: 200px; padding-left: 150px; box-sizing: border-box; margin-top: -120px;
+            h3{font-size: 50px; margin-bottom: 20px;}
+          }
+
+          .csstext2{text-align: left; position: relative;
+            img{width: 50%; float: right; border-radius: 10px 0 0 10px; margin-top: 25px;}
+            p{font-size: 16px; padding: 90px 40px; background-color: skyblue; width: 400px; height: 250px; border-radius: 0 10px 10px 0; line-height: 2; box-sizing: border-box; margin-bottom: 30px;}
+          }
+
+          .csstext3{position: relative;
+            img{width: 50%; height: 200px; float: left;}
+            p{width: 600px; line-height: 30px; background-color: skyblue; position: absolute; top: 150px; left: calc(50% - 300px); border-radius: 10px; padding: 20px 0;}
+          }
+
 
         }
         a{left: 0;}
       }
       // sass
-      div:nth-of-type(3){position: relative; top: 0; left: 375px; border-radius: 0 10px 10px 10px;
+      section:nth-of-type(3){position: relative; top: 0; left: 375px; border-radius: 0 10px 10px 10px;
         .content{
+          //원형 프로그래스바
+          .progress{width: 160px; height: 160px; position: relative; top: 30px; left: 30px;
+            .outer{width: 160px; height: 160px; border-radius: 50%; padding: 19px; box-sizing: border-box;
+                    box-shadow: 6px 6px 10px -1px rgba($color: #000000, $alpha: 0.45),
+                                -6px -6px 10px -1px rgba($color: #ffffff, $alpha: 0.7);
+
+              .inner{width: 120px; height: 120px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+                    box-shadow: inset 4px 4px 6px -1px rgba($color: #000000, $alpha: 0.5),
+                                inset -4px -4px 6px -1px rgba($color: #ffffff, $alpha: 0.7),
+                                -0.5px -0.5px 0px rgba($color: #ffffff, $alpha: 1.0),
+                                0.5px 0.5px 0px rgba($color: #000000, $alpha: 0.2),
+                                0px 12px 10px -10px rgba($color: #000000, $alpha: 0.5);
+
+                #number{font-size: 20px; font-weight: bold; color: #777;}
+              }
+            }
+          }
+          circle{fill: none; stroke: url(#GradientColor3); stroke-width: 20px; stroke-dasharray: 472; stroke-dashoffset: 472; animation: anim3 1.5s linear forwards;}
+          .svg3{position: absolute; top: 30px; left: 30px; transform: rotate(-85deg);}
+          @keyframes anim3 {100% {stroke-dashoffset: 190;}}
+
+          .sasstext{width: 100%; height: 200px; padding-left: 150px; box-sizing: border-box; margin-top: -120px;
+            h3{font-size: 50px; margin-bottom: 20px;}
+          }
+
+          .sasstext2{position: relative;
+            img{width: 50%; float: left; border-radius: 0 10px 10px 0; }
+            p{font-size: 16px; line-height: 2; padding-top: 55px; box-sizing: border-box; margin-bottom: 100px;}
+          }
+
 
         }
 
         a{left: 0;}
       }
       // script
-      div:nth-of-type(4){position: relative; top: 0; left: calc(50% - 350px); border-radius: 10px;
+      section:nth-of-type(4){position: relative; top: 0; left: calc(50% - 350px); border-radius: 10px;
         .content{
+          //원형 프로그래스바
+          .progress{width: 160px; height: 160px; position: relative; top: 30px; left: 30px;
+            .outer{width: 160px; height: 160px; border-radius: 50%; padding: 19px; box-sizing: border-box;
+                    box-shadow: 6px 6px 10px -1px rgba($color: #000000, $alpha: 0.45),
+                                -6px -6px 10px -1px rgba($color: #ffffff, $alpha: 0.7);
+
+              .inner{width: 120px; height: 120px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+                    box-shadow: inset 4px 4px 6px -1px rgba($color: #000000, $alpha: 0.5),
+                                inset -4px -4px 6px -1px rgba($color: #ffffff, $alpha: 0.7),
+                                -0.5px -0.5px 0px rgba($color: #ffffff, $alpha: 1.0),
+                                0.5px 0.5px 0px rgba($color: #000000, $alpha: 0.2),
+                                0px 12px 10px -10px rgba($color: #000000, $alpha: 0.5);
+
+                #number{font-size: 20px; font-weight: bold; color: #777;}
+              }
+            }
+          }
+          circle{fill: none; stroke: url(#GradientColor4); stroke-width: 20px; stroke-dasharray: 472; stroke-dashoffset: 472; animation: anim4 1.5s linear forwards;}
+          .svg4{position: absolute; top: 30px; left: 30px; transform: rotate(-85deg);}
+          @keyframes anim4 {100% {stroke-dashoffset: 330;}}
+
+          .scripttext{width: 100%; height: 200px; padding-left: 170px; box-sizing: border-box; margin-top: -110px;
+            h3{font-size: 50px; margin-bottom: 20px;}
+          }
+
+          .scripttext2{position: relative;
+            img{width: 50%; float: left;}
+            p{width: 450px; height: 60px; background-color: rgba($color: #000000, $alpha: 0.8); position: absolute; top: 100px; left: calc(50% - 225px); color: #fff; box-sizing: border-box; padding-top: 22px; border-radius: 10px;}
+          }
 
         }
         a{right: 0;}
       }
       // jquery
-      div:nth-of-type(5){position: relative; top: 0; left: 115px; border-radius: 10px 0 10px 10px;
+      section:nth-of-type(5){position: relative; top: 0; left: 115px; border-radius: 10px 0 10px 10px;
         .content{
+          //원형 프로그래스바
+          .progress{width: 160px; height: 160px; position: relative; top: 30px; left: 30px;
+            .outer{width: 160px; height: 160px; border-radius: 50%; padding: 19px; box-sizing: border-box;
+                    box-shadow: 6px 6px 10px -1px rgba($color: #000000, $alpha: 0.45),
+                                -6px -6px 10px -1px rgba($color: #ffffff, $alpha: 0.7);
 
+              .inner{width: 120px; height: 120px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+                    box-shadow: inset 4px 4px 6px -1px rgba($color: #000000, $alpha: 0.5),
+                                inset -4px -4px 6px -1px rgba($color: #ffffff, $alpha: 0.7),
+                                -0.5px -0.5px 0px rgba($color: #ffffff, $alpha: 1.0),
+                                0.5px 0.5px 0px rgba($color: #000000, $alpha: 0.2),
+                                0px 12px 10px -10px rgba($color: #000000, $alpha: 0.5);
+
+                #number{font-size: 20px; font-weight: bold; color: #777;}
+              }
+            }
+          }
+          circle{fill: none; stroke: url(#GradientColor5); stroke-width: 20px; stroke-dasharray: 472; stroke-dashoffset: 472; animation: anim5 1.5s linear forwards;}
+          .svg5{position: absolute; top: 30px; left: 30px; transform: rotate(-85deg);}
+          @keyframes anim5 {100% {stroke-dashoffset: 225;}}
         }
         a{right: 0;}
       }
       // three.js
-      div:nth-of-type(6){position: relative; top: 0; left: 285px; border-radius: 10px 0 10px 10px;
+      section:nth-of-type(6){position: relative; top: 0; left: 285px; border-radius: 10px 0 10px 10px;
         .content{
+          //원형 프로그래스바
+          .progress{width: 160px; height: 160px; position: relative; top: 30px; left: 30px;
+            .outer{width: 160px; height: 160px; border-radius: 50%; padding: 19px; box-sizing: border-box;
+                    box-shadow: 6px 6px 10px -1px rgba($color: #000000, $alpha: 0.45),
+                                -6px -6px 10px -1px rgba($color: #ffffff, $alpha: 0.7);
 
+              .inner{width: 120px; height: 120px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+                    box-shadow: inset 4px 4px 6px -1px rgba($color: #000000, $alpha: 0.5),
+                                inset -4px -4px 6px -1px rgba($color: #ffffff, $alpha: 0.7),
+                                -0.5px -0.5px 0px rgba($color: #ffffff, $alpha: 1.0),
+                                0.5px 0.5px 0px rgba($color: #000000, $alpha: 0.2),
+                                0px 12px 10px -10px rgba($color: #000000, $alpha: 0.5);
+
+                #number{font-size: 20px; font-weight: bold; color: #777;}
+              }
+            }
+          }
+          circle{fill: none; stroke: url(#GradientColor6); stroke-width: 20px; stroke-dasharray: 472; stroke-dashoffset: 472; animation: anim6 1.5s linear forwards;}
+          .svg6{position: absolute; top: 30px; left: 30px; transform: rotate(-85deg);}
+          @keyframes anim6 {100% {stroke-dashoffset: 440;}}
         }
         a{right: 0;}
       }
       // photoshop
-      div:nth-of-type(7){position: relative; top: 0; left: 455px; border-radius: 10px 0 10px 10px;
+      section:nth-of-type(7){position: relative; top: 0; left: 455px; border-radius: 10px 0 10px 10px;
         .content{
+          //원형 프로그래스바
+          .progress{width: 160px; height: 160px; position: relative; top: 30px; left: 30px;
+            .outer{width: 160px; height: 160px; border-radius: 50%; padding: 19px; box-sizing: border-box;
+                    box-shadow: 6px 6px 10px -1px rgba($color: #000000, $alpha: 0.45),
+                                -6px -6px 10px -1px rgba($color: #ffffff, $alpha: 0.7);
 
+              .inner{width: 120px; height: 120px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+                    box-shadow: inset 4px 4px 6px -1px rgba($color: #000000, $alpha: 0.5),
+                                inset -4px -4px 6px -1px rgba($color: #ffffff, $alpha: 0.7),
+                                -0.5px -0.5px 0px rgba($color: #ffffff, $alpha: 1.0),
+                                0.5px 0.5px 0px rgba($color: #000000, $alpha: 0.2),
+                                0px 12px 10px -10px rgba($color: #000000, $alpha: 0.5);
+
+                #number{font-size: 20px; font-weight: bold; color: #777;}
+              }
+            }
+          }
+          circle{fill: none; stroke: url(#GradientColor7); stroke-width: 20px; stroke-dasharray: 472; stroke-dashoffset: 472; animation: anim7 1.5s linear forwards;}
+          .svg7{position: absolute; top: 30px; left: 30px; transform: rotate(-85deg);}
+          @keyframes anim7 {100% {stroke-dashoffset: 190;}}
         }
         a{right: 0;}
       }
