@@ -137,8 +137,8 @@ li.select{background-color: #eee; opacity: 1;}
       section{width: 700px; height: 400px; background-color: rgba($color: #fff, $alpha: 1.0); display: none;
         .content{width: 100%; height: 385px; position: relative; background-color: #fff; box-sizing: border-box; overflow: auto; border-radius: 10px;
         }
-        a{width: 100%; background-color: #eee; display: block; border-radius: 10px 10px 0 0;
-          i{font-size: 10px; font-weight: bold; color: #000; line-height: 15px;}
+        a{width: 100%; background-color: #eee; display: block; border-radius: 10px 10px 0 0; 
+          i{font-size: 15px; font-weight: bold; color: #000;}
         }
         
       }
@@ -241,7 +241,7 @@ li.select{background-color: #eee; opacity: 1;}
           }
           circle{fill: none; stroke: url(#GradientColor3); stroke-width: 20px; stroke-dasharray: 472; stroke-dashoffset: 472; animation: anim3 1.5s linear forwards;}
           .svg3{position: absolute; top: 30px; left: 30px; transform: rotate(-85deg);}
-          @keyframes anim3 {100% {stroke-dashoffset: 190;}}
+          @keyframes anim3 {100% {stroke-dashoffset: 120;}}
 
           .sasstext{width: 100%; height: 200px; padding-left: 150px; box-sizing: border-box; margin-top: -120px;
             h3{font-size: 50px; margin-bottom: 20px;}
@@ -279,7 +279,7 @@ li.select{background-color: #eee; opacity: 1;}
           }
           circle{fill: none; stroke: url(#GradientColor4); stroke-width: 20px; stroke-dasharray: 472; stroke-dashoffset: 472; animation: anim4 1.5s linear forwards;}
           .svg4{position: absolute; top: 30px; left: 30px; transform: rotate(-85deg);}
-          @keyframes anim4 {100% {stroke-dashoffset: 330;}}
+          @keyframes anim4 {100% {stroke-dashoffset: 310;}}
 
           .scripttext{width: 100%; height: 200px; padding-left: 170px; box-sizing: border-box; margin-top: -110px;
             h3{font-size: 50px; margin-bottom: 20px;}
@@ -315,13 +315,26 @@ li.select{background-color: #eee; opacity: 1;}
           }
           circle{fill: none; stroke: url(#GradientColor5); stroke-width: 20px; stroke-dasharray: 472; stroke-dashoffset: 472; animation: anim5 1.5s linear forwards;}
           .svg5{position: absolute; top: 30px; left: 30px; transform: rotate(-85deg);}
-          @keyframes anim5 {100% {stroke-dashoffset: 225;}}
+          @keyframes anim5 {100% {stroke-dashoffset: 165;}}
+
+          .jquerytext{width: 100%; height: 200px; padding-left: 190px; box-sizing: border-box; margin-top: -140px;
+            h3{font-size: 50px; margin-bottom: 20px;}
+          }
+
+          .jquerytext2{position: relative; margin-top: 50px;
+            img{width: 70%; float: left;}
+            p{width: 200px; height: 170px; background-color: rgba($color: #000000, $alpha: 0.8); position: absolute; top: 60px; right: 100px; color: #fff; box-sizing: border-box; padding: 20px 5px; border-radius: 10px;}
+            p:nth-of-type(2){position: absolute; top: 500px; right: 100px; }
+            p:nth-of-type(3){position: absolute; top: 900px; left: 10px; height: 230px;}
+            img:nth-of-type(3){float: right;}
+          }
+          
         }
         a{right: 0;}
       }
       // three.js
-      section:nth-of-type(6){position: relative; top: 0; left: 285px; border-radius: 10px 0 10px 10px;
-        .content{
+      section:nth-of-type(6){position: relative; top: 0; left: 285px; border-radius: 10px 0 10px 10px; 
+        .content{position: relative;
           //원형 프로그래스바
           .progress{width: 160px; height: 160px; position: relative; top: 30px; left: 30px;
             .outer{width: 160px; height: 160px; border-radius: 50%; padding: 19px; box-sizing: border-box;
@@ -342,6 +355,22 @@ li.select{background-color: #eee; opacity: 1;}
           circle{fill: none; stroke: url(#GradientColor6); stroke-width: 20px; stroke-dasharray: 472; stroke-dashoffset: 472; animation: anim6 1.5s linear forwards;}
           .svg6{position: absolute; top: 30px; left: 30px; transform: rotate(-85deg);}
           @keyframes anim6 {100% {stroke-dashoffset: 440;}}
+
+          .threetext{width: 100%; height: 200px; padding-left: 200px; box-sizing: border-box; margin-top: -120px;
+            h3{font-size: 50px; margin-bottom: 20px;}
+          }
+
+          .threetext2{position: relative; margin-top: 50px;
+            p{width: 90%; height: 70px; background-color: rgba($color: #000000, $alpha: 0.7); color: #fff; border-radius: 10px; box-sizing: border-box; padding: 10px 20px; 
+                margin: 15px auto;}
+          }
+
+          .threetext3{position: relative;
+            img:nth-of-type(1){width: 70%; float: left; margin-top: 30px;}
+            p:nth-of-type(1){width: 250px; height: 330px; background-color: rgba($color: #000000, $alpha: 0.7); position: absolute; top: 100px; right: 70px; color: #fff; border-radius: 10px; box-sizing: border-box; padding-top: 10px;}
+            img:nth-of-type(2){width: 100%; border-top: 1px solid #777; box-sizing: border-box; margin-top: 30px; margin-bottom: 30px;}
+            p:nth-of-type(2){position: absolute; top: 585px; left: calc(50% - 300px); width: 600px; background-color: rgba($color: #000000, $alpha: 0.7); color: #fff; border-radius: 10px; padding: 10px 0;}
+          }
         }
         a{right: 0;}
       }
@@ -367,7 +396,19 @@ li.select{background-color: #eee; opacity: 1;}
           }
           circle{fill: none; stroke: url(#GradientColor7); stroke-width: 20px; stroke-dasharray: 472; stroke-dashoffset: 472; animation: anim7 1.5s linear forwards;}
           .svg7{position: absolute; top: 30px; left: 30px; transform: rotate(-85deg);}
-          @keyframes anim7 {100% {stroke-dashoffset: 190;}}
+          @keyframes anim7 {100% {stroke-dashoffset: 120;}}
+
+          .photoshoptext{width: 100%; height: 200px; padding-left: 220px; box-sizing: border-box; margin-top: -150px;
+            h3{font-size: 50px; margin-bottom: 20px;}
+          }
+
+          .photoshoptext2{position: relative;
+            img:nth-of-type(1){margin-top: 30px;}
+            img:nth-of-type(2){margin-top: 10px; float: left;}
+            p{width: 270px; height: 250px; background-color: rgba($color: #000000, $alpha: 0.7); position: absolute; top: 200px; right: 5px; color: #fff; border-radius: 10px; box-sizing: border-box; padding: 65px 10px;}
+          }
+
+
         }
         a{right: 0;}
       }
@@ -380,13 +421,35 @@ li.select{background-color: #eee; opacity: 1;}
 
 /* 포트폴리오 목록 영역*/
 .portfolio{
-  width: 99%; height: 100%; background-color: #ff1361; position: relative; margin: 0 auto; overflow: auto; display: none;
+  width: 99%; height: 100%; background-color: rgba($color: #999, $alpha: 0.5); position: relative; margin: 0 auto; overflow: auto; display: none;
   
   .p2{
     width: 100%; height: 1800px; position: relative; overflow: scroll hidden;
+    //한양사이버대학원 홈페이지
+    .hanyang{width: 100%; height: 600px;
 
-    h3{font-size: 30px; color: #fff;}
-    div{width: 300px; height: 300px; background-color: #fff800; position: absolute; bottom: 30px; left: 200px;}
+      h3{font-size: 35px; color: #eee; margin: 30px 0; font-weight: 400;}
+
+      .link{width: 50%; height: 350px; position: relative; overflow: hidden; float: left;
+        .hanyangslide{position: relative; width: 1782px; height: 100%;
+          li{float: left; height: 100%; width: 594px;
+            a{display: block; width: 100%; height: 100%;}
+              img{width: 100%; height: 100%; object-fit: cover;}
+          }
+        }
+        button{width: 30px; border-radius: 30px; border: none; background-color: #fff; cursor: pointer; position: absolute; top: calc(50% - 15px); transform: scale(1);
+          :hover{border-radius: 30px; width: 30px; height: 30px; border: 2px solid #222; transform: scale(1.1); box-sizing: border-box;}
+          i{font-size: 20px; line-height: 30px; color: #444; font-weight: bold;}
+        }
+        .prev{left: 5px;}
+        .next{right: 5px;}
+      }
+
+      .notice{width: 50%; height: 350px; float: right; box-sizing: border-box; padding: 0 20px; color: #fff; background-color: #333;
+
+      }
+    }
+
   }
 }
 .on{display: block;}

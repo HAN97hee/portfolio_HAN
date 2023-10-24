@@ -57,6 +57,41 @@ $(".skillicon li, .skill > section").on("mouseleave focusin",function(){
 });
 
 
+//포트폴리오 슬라이드 
+
+//한양사이버대학원 슬라이더
+var han = 0;
+var g = 0;
+function hanyangauto(){
+    han++;
+    if(g >= 3) {g = 0;}
+
+    
+    $(".hanyangslide").animate({"left":-594 + han},500,function(){
+        $(this).append($(".hanyangslide li:first-child")).css({"left":"0"});
+    })};
+
+
+var hantimer = setInterval("hanyangauto()",6000);
+
+$(".link").hover(
+    function(){
+        clearInterval(hantimer)
+    },
+    function(){
+        hantimer = setInterval("hanyangauto()",6000)
+    }
+);
+
+$(".next").click(function(){
+    $(".hanyangslide").animate({"left":"-594px"},500,function(){
+        $(this).append($(".hanyangslide li:first-child")).css({"left":"0"});
+    });
+});
+
+$(".prev").click(function(){
+    $(".hanyangslide").css({"left":"-594px"}).prepend($(".hanyangslide li:last-child")).animate({"left":"0"},500)
+});
 
 
 
