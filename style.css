@@ -129,6 +129,35 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+#main .ex {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  z-index: 3;
+}
+#main .ex i {
+  font-size: 40px;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+}
+#main .ex p {
+  width: 600px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #000;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  font-size: 15px;
+  display: none;
+  border-radius: 10px;
+}
+#main .ex p.on {
+  display: block;
+}
 #main #app {
   text-align: center;
   z-index: 3;
@@ -337,6 +366,7 @@
   height: 400px;
   background-color: white;
   display: none;
+  overflow-x: hidden;
 }
 #infor .information .p1 .skill section .content {
   width: 100%;
@@ -1046,7 +1076,6 @@
 #infor .portfolio {
   width: 99%;
   height: 100%;
-  background-color: rgba(153, 153, 153, 0.5);
   position: relative;
   margin: 0 auto;
   overflow: auto;
@@ -1054,13 +1083,15 @@
 }
 #infor .portfolio .p2 {
   width: 100%;
-  height: 1800px;
+  height: 2000px;
   position: relative;
   overflow: scroll hidden;
 }
 #infor .portfolio .p2 .hanyang {
   width: 100%;
-  height: 600px;
+  height: 570px;
+  position: relative;
+  margin-bottom: 80px;
 }
 #infor .portfolio .p2 .hanyang h3 {
   font-size: 35px;
@@ -1133,7 +1164,301 @@
   box-sizing: border-box;
   padding: 0 20px;
   color: #fff;
-  background-color: #333;
+}
+#infor .portfolio .p2 .hanyang .notice h4 {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 400;
+}
+#infor .portfolio .p2 .hanyang .notice span {
+  margin-top: 30px;
+  display: block;
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+#infor .portfolio .p2 .hanyang .notice a {
+  box-sizing: border-box;
+  padding: 7px 20px;
+  font-size: 20px;
+  background-color: #eee;
+  color: #444;
+  margin-right: 50px;
+  border-radius: 7px;
+  transition: 0.5s;
+}
+#infor .portfolio .p2 .hanyang .notice a:hover {
+  background-color: silver;
+  color: #000;
+}
+#infor .portfolio .p2 .hanyang .notice p {
+  margin-top: 40px;
+}
+#infor .portfolio .p2 .hanyang .notice ul {
+  margin-top: 15px;
+}
+#infor .portfolio .p2 .hanyang .notice ul li {
+  float: left;
+  margin-right: 20px;
+  background-color: #fff;
+  color: #111;
+  box-sizing: border-box;
+  padding: 5px 15px;
+  border-radius: 50px;
+}
+#infor .portfolio .p2 .world {
+  width: 100%;
+  height: 570px;
+  position: relative;
+  margin-bottom: 80px;
+}
+#infor .portfolio .p2 .world h3 {
+  font-size: 35px;
+  color: #eee;
+  margin: 30px 0;
+  font-weight: 400;
+}
+#infor .portfolio .p2 .world .link2 {
+  width: 50%;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+#infor .portfolio .p2 .world .link2 .worldslide {
+  position: relative;
+  width: 2970px;
+  height: 100%;
+}
+#infor .portfolio .p2 .world .link2 .worldslide li {
+  float: left;
+  height: 100%;
+  width: 594px;
+}
+#infor .portfolio .p2 .world .link2 .worldslide li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#infor .portfolio .p2 .world .link2 .worldslide li img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#infor .portfolio .p2 .world .link2 button {
+  width: 30px;
+  border-radius: 30px;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: calc(50% - 15px);
+  transform: scale(1);
+}
+#infor .portfolio .p2 .world .link2 button :hover {
+  border-radius: 30px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #222;
+  transform: scale(1.1);
+  box-sizing: border-box;
+}
+#infor .portfolio .p2 .world .link2 button i {
+  font-size: 20px;
+  line-height: 30px;
+  color: #444;
+  font-weight: bold;
+}
+#infor .portfolio .p2 .world .link2 .wprev {
+  left: 5px;
+}
+#infor .portfolio .p2 .world .link2 .wnext {
+  right: 5px;
+}
+#infor .portfolio .p2 .world .notice {
+  width: 50%;
+  height: 350px;
+  float: right;
+  box-sizing: border-box;
+  padding: 0 20px;
+  color: #fff;
+}
+#infor .portfolio .p2 .world .notice h4 {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 400;
+}
+#infor .portfolio .p2 .world .notice span {
+  margin-top: 30px;
+  display: block;
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+#infor .portfolio .p2 .world .notice a {
+  box-sizing: border-box;
+  padding: 7px 20px;
+  font-size: 20px;
+  background-color: #eee;
+  color: #444;
+  margin-right: 50px;
+  border-radius: 7px;
+  transition: 0.5s;
+}
+#infor .portfolio .p2 .world .notice a:hover {
+  background-color: silver;
+  color: #000;
+}
+#infor .portfolio .p2 .world .notice p {
+  margin-top: 40px;
+}
+#infor .portfolio .p2 .world .notice ul {
+  margin-top: 15px;
+}
+#infor .portfolio .p2 .world .notice ul li {
+  float: left;
+  margin-right: 20px;
+  background-color: #fff;
+  color: #111;
+  box-sizing: border-box;
+  padding: 5px 15px;
+  border-radius: 50px;
+}
+#infor .portfolio .p2 .hifunitrue {
+  width: 100%;
+  height: 570px;
+  position: relative;
+}
+#infor .portfolio .p2 .hifunitrue h3 {
+  font-size: 35px;
+  color: #eee;
+  margin: 30px 0;
+  font-weight: 400;
+}
+#infor .portfolio .p2 .hifunitrue .link3 {
+  width: 50%;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+#infor .portfolio .p2 .hifunitrue .link3 .hislide {
+  position: relative;
+  width: 4185px;
+  height: 100%;
+}
+#infor .portfolio .p2 .hifunitrue .link3 .hislide li {
+  float: left;
+  height: 100%;
+  width: 594px;
+}
+#infor .portfolio .p2 .hifunitrue .link3 .hislide li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#infor .portfolio .p2 .hifunitrue .link3 .hislide li img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#infor .portfolio .p2 .hifunitrue .link3 button {
+  width: 30px;
+  border-radius: 30px;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: calc(50% - 15px);
+  transform: scale(1);
+}
+#infor .portfolio .p2 .hifunitrue .link3 button :hover {
+  border-radius: 30px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #222;
+  transform: scale(1.1);
+  box-sizing: border-box;
+}
+#infor .portfolio .p2 .hifunitrue .link3 button i {
+  font-size: 20px;
+  line-height: 30px;
+  color: #444;
+  font-weight: bold;
+}
+#infor .portfolio .p2 .hifunitrue .link3 .hprev {
+  left: 5px;
+}
+#infor .portfolio .p2 .hifunitrue .link3 .hnext {
+  right: 5px;
+}
+#infor .portfolio .p2 .hifunitrue .notice {
+  width: 50%;
+  height: 350px;
+  float: right;
+  box-sizing: border-box;
+  padding: 0 20px;
+  color: #fff;
+}
+#infor .portfolio .p2 .hifunitrue .notice h4 {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 400;
+}
+#infor .portfolio .p2 .hifunitrue .notice span {
+  margin-top: 30px;
+  display: block;
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+#infor .portfolio .p2 .hifunitrue .notice a {
+  box-sizing: border-box;
+  padding: 7px 20px;
+  font-size: 20px;
+  background-color: #eee;
+  color: #444;
+  margin-right: 50px;
+  border-radius: 7px;
+  transition: 0.5s;
+}
+#infor .portfolio .p2 .hifunitrue .notice a:hover {
+  background-color: silver;
+  color: #000;
+}
+#infor .portfolio .p2 .hifunitrue .notice p {
+  margin-top: 30px;
+}
+#infor .portfolio .p2 .hifunitrue .notice ul {
+  margin-top: 5px;
+}
+#infor .portfolio .p2 .hifunitrue .notice ul li {
+  float: left;
+  margin: 0 20px 10px 0;
+  background-color: #fff;
+  color: #111;
+  box-sizing: border-box;
+  padding: 5px 15px;
+  border-radius: 50px;
+}
+#infor .portfolio .p2 .webexplanation {
+  width: 97%;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  bottom: 0;
+  left: 1.5%;
+  border-radius: 3px;
+  box-sizing: border-box;
+  padding: 0 5px;
+}
+#infor .portfolio .p2 .webexplanation h5 {
+  font-weight: 500;
+}
+#infor .portfolio .p2 .webexplanation p {
+  font-size: 14px;
+}
+#infor .portfolio .p2 .webexplanation p span {
+  font-size: 10px;
 }
 #infor .on {
   display: block;

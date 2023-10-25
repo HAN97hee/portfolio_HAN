@@ -1,3 +1,4 @@
+// 텍스트 타자기
 var app = document.getElementById('app');
 
 var typewriter = new Typewriter(app, {
@@ -19,8 +20,25 @@ typewriter.typeString('Welcome to my homepage')
 
 
 
-
+// 위성클릭시 페이지 이동 
 $("#sship").dblclick(function(){
     window.open("자기소개.html");
 })
+
+
+
+// 페이지 안내 전구 텍스트 블록
+const iconElement = document.querySelector('.ex i');
+
+const textElement = document.querySelector('.ex p');
+
+iconElement.addEventListener('mouseenter', () => {
+    textElement.classList.add('on');
+});
+
+
+iconElement.addEventListener('mouseleave', () => {
+    textElement.classList.remove('on');
+});
+
 

@@ -58,16 +58,12 @@ $(".skillicon li, .skill > section").on("mouseleave focusin",function(){
 
 
 //포트폴리오 슬라이드 
+var g = 0;
 
 //한양사이버대학원 슬라이더
-var han = 0;
-var g = 0;
 function hanyangauto(){
-    han++;
-    if(g >= 3) {g = 0;}
-
     
-    $(".hanyangslide").animate({"left":-594 + han},500,function(){
+    $(".hanyangslide").animate({"left":"-594px"},500,function(){
         $(this).append($(".hanyangslide li:first-child")).css({"left":"0"});
     })};
 
@@ -84,9 +80,7 @@ $(".link").hover(
 );
 
 $(".next").click(function(){
-    $(".hanyangslide").animate({"left":"-594px"},500,function(){
-        $(this).append($(".hanyangslide li:first-child")).css({"left":"0"});
-    });
+    hanyangauto();
 });
 
 $(".prev").click(function(){
@@ -95,11 +89,60 @@ $(".prev").click(function(){
 
 
 
+//세계자연기금 슬라이더
+function worldauto(){
+    $(".worldslide").animate({"left":"-594px"},500,function(){
+        $(this).append($(".worldslide li:first-child")).css({"left":"0"});
+    })};
+
+
+var worldtimer = setInterval("worldauto()",6000);
+
+$(".link2").hover(
+    function(){
+        clearInterval(worldtimer)
+    },
+    function(){
+        worldtimer = setInterval("worldauto()",6000)
+    }
+);
+
+$(".wnext").click(function(){
+    worldauto();
+});
+
+$(".wprev").click(function(){
+    $(".worldslide").css({"left":"-594px"}).prepend($(".worldslide li:last-child")).animate({"left":"0"},500)
+});
 
 
 
+//하이퍼니처 슬라이드
+function hiauto(){
+    
+    $(".hislide").animate({"left":"-594px"},500,function(){
+        $(this).append($(".hislide li:first-child")).css({"left":"0"});
+    })};
 
 
+var hitimer = setInterval("hiauto()",6000);
+
+$(".link3").hover(
+    function(){
+        clearInterval(hitimer)
+    },
+    function(){
+        hitimer = setInterval("hiauto()",6000)
+    }
+);
+
+$(".hnext").click(function(){
+    hiauto();
+});
+
+$(".hprev").click(function(){
+    $(".hislide").css({"left":"-594px"}).prepend($(".hislide li:last-child")).animate({"left":"0"},500)
+});
 
 
 
