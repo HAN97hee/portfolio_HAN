@@ -143,8 +143,8 @@ li.select{background-color: #eee; opacity: 1;}
         li:last-child{margin-right: 0;}
       }
 
-      section{width: 700px; height: 400px; background-color: rgba($color: #fff, $alpha: 1.0); display: none; overflow-x: hidden; z-index: 2;
-        .content{width: 100%; height: 385px; position: relative; background-color: #fff; box-sizing: border-box; overflow: auto; border-radius: 10px; overflow-x: hidden;
+      section{width: 700px; height: 400px; background-color: rgba($color: #fff, $alpha: 1.0); display: none; overflow-x: hidden; z-index: 2; overflow-y: hidden;
+        .content{width: 100%; height: 385px; position: relative; background-color: #fff; box-sizing: border-box; overflow: auto; border-radius: 10px; overflow-x: hidden; 
         }
         a{width: 100%; background-color: #eee; display: block; border-radius: 10px 10px 0 0; 
           i{font-size: 15px; font-weight: bold; color: #000;}
@@ -557,26 +557,6 @@ li.select{background-color: #eee; opacity: 1;}
 }
 .on{display: block;}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

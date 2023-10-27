@@ -383,6 +383,7 @@ body {
   display: none;
   overflow-x: hidden;
   z-index: 2;
+  overflow-y: hidden;
 }
 #infor .information .p1 .skill section .content {
   width: 100%;
